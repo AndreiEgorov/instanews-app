@@ -1,0 +1,17 @@
+
+@import "variables";
+@import "mixins";
+
+li {
+    flex: 0 1 100%;
+    @include tablet {
+       flex: 0 1 100%;
+    }
+ }
+
+ li {
+    flex: 0 1 100%;
+    @include desktop {
+       flex: 0 1 50%;
+    }
+ }
