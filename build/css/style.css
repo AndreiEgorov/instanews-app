@@ -1,3 +1,7 @@
+html body .ny-logo, html body .menu-top, html body .dropdown-menu {
+  min-width: 100%;
+  text-align: center; }
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -50,7 +54,37 @@ table {
 html {
   background-color: black;
   color: #ffffff;
-  font-size: 16px; }
+  font-size: 16px;
+  height: 100%; }
+  html body {
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    html body .contents {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 400px;
+      width: 100%;
+      -ms-flex-line-pack: end;
+          align-content: flex-end; }
+    html body .menu-top {
+      margin: 1rem auto; }
+    html body footer {
+      -ms-flex-item-align: center;
+          align-self: center;
+      margin: auto auto 6% auto; }
 
 li {
   -webkit-box-flex: 0;

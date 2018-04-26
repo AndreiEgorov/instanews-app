@@ -7,19 +7,60 @@ html{
     background-color: black;
     color: #ffffff;
     font-size: 16px;
+    height:100%;
+
+    body{
+        min-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .contents{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 400px;
+            width:100%;
+            align-content: flex-end;
+             }
+            .ny-logo{
+                @extend %positioning-mobile;
+            }
+            .menu-top{
+                @extend %positioning-mobile;
+                margin: 1rem auto;
+            }
+
+            .dropdown-menu{
+                @extend %positioning-mobile;
+            }    
+
+        footer{
+            align-self: center;
+            margin: auto auto 6% auto;
+        }
+    }
+
+
+
 }
+
+
+
+
+
 
 li {
     flex: 0 1 100%;
     @include tablet {
-       flex: 0 1 100%;
+        flex: 0 1 100%;
     }
- }
+}
 
- li {
+li {
     flex: 0 1 100%;
     @include desktop {
-       flex: 0 1 50%;
+        flex: 0 1 50%;
     }
- }
+}
 
