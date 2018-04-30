@@ -1,4 +1,4 @@
-html body .contents .ny-logo, html body .contents .menu-top, html body .contents .dropdown-menu {
+html body .contents .ny-logo, html body .contents #dropdown-elements .menu-top, html body .contents #dropdown-elements .dropdown-menu {
   min-width: 100%;
   text-align: center; }
 
@@ -51,6 +51,10 @@ table {
   font-weight: 300;
   font-style: normal; }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 html {
   background-color: black;
   color: #ffffff;
@@ -90,33 +94,49 @@ html {
           -webkit-box-ordinal-group: 2;
               -ms-flex-order: 1;
                   order: 1;
-          margin: 0 25% 0 auto; } }
-      html body .contents .menu-top {
-        margin: 1rem auto; }
-      @media screen and (min-width: 600px) {
-        html body .contents .menu-top {
-          -webkit-box-ordinal-group: 3;
-              -ms-flex-order: 2;
-                  order: 2;
-          margin: -8.5rem auto 0 77rem;
-          -ms-flex-preferred-size: 100%;
-              flex-basis: 100%;
-          text-align: left; } }
-      html body .contents #loader {
-        height: 2rem;
-        padding-bottom: 7px;
-        display: none; }
-      html body .contents .dropdown-menu select {
-        background-color: white; }
-      @media screen and (min-width: 600px) {
-        html body .contents .dropdown-menu {
-          -webkit-box-ordinal-group: 4;
-              -ms-flex-order: 3;
-                  order: 3;
-          margin: -7rem auto 0 77rem;
-          -ms-flex-preferred-size: 100%;
-              flex-basis: 100%;
-          text-align: left; } }
+          min-width: 100%;
+          margin: 0 10rem 0 auto; } }
+      html body .contents #dropdown-elements {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2; }
+        @media screen and (min-width: 600px) {
+          html body .contents #dropdown-elements {
+            margin: -9rem -22rem 0 auto;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%; } }
+        html body .contents #dropdown-elements .menu-top {
+          margin: 1rem auto; }
+        @media screen and (min-width: 600px) {
+          html body .contents #dropdown-elements .menu-top {
+            -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                    order: 2;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            text-align: center;
+            margin: 0px auto 1rem -30rem; } }
+        html body .contents #dropdown-elements #loader {
+          height: 2rem;
+          padding-bottom: 7px;
+          display: none; }
+        html body .contents #dropdown-elements .dropdown-menu select {
+          background-color: white; }
+          @media screen and (min-width: 600px) {
+            html body .contents #dropdown-elements .dropdown-menu select {
+              margin: 0 44px 0 0; } }
+        @media screen and (min-width: 600px) {
+          html body .contents #dropdown-elements .dropdown-menu {
+            text-align: initial;
+            text-align: center;
+            margin: 0 auto 1px -28rem; } }
+        @media screen and (min-width: 600px) {
+          html body .contents #dropdown-elements .dropdown-menu {
+            -webkit-box-ordinal-group: 4;
+                -ms-flex-order: 3;
+                    order: 3;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%; } }
     @media screen and (min-width: 600px) {
       html body header {
         display: -webkit-box;
@@ -152,15 +172,17 @@ html {
               width: 100%;
               background-color: rgba(0, 0, 0, 0.497); }
     html body footer {
-      -ms-flex-item-align: center;
-          align-self: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       margin: auto auto 6% auto;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-line-pack: center;
           align-content: center;
-      color: #c2c2c2; }
+      color: #c2c2c2;
+      width: 100%; }
       html body footer #copyright {
         padding: 15px; }
   html li {

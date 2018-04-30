@@ -38,7 +38,7 @@ $(document).ready(function () {
                     var filteredAbstract = value.abstract;
                     var filterdLink = value.url;
 
-                    console.log(filteredAbstract);
+
 
 
                     $("#news").append("<li> <a href=" + [filterdLink] + "> <div class='newsbox' id='newssquare" + index + "' style='background-image: url(" + filteredImage + ")'></div> </a> </li>");
