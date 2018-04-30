@@ -80,15 +80,50 @@ html {
       height: 400px;
       width: 100%;
       -ms-flex-line-pack: end;
-          align-content: flex-end; }
+          align-content: flex-end;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: all 0.5s linear;
+      transition: all 0.5s linear; }
+      @media screen and (min-width: 600px) {
+        html body .contents .ny-logo {
+          -webkit-box-ordinal-group: 2;
+              -ms-flex-order: 1;
+                  order: 1;
+          margin: 0 25% 0 auto; } }
       html body .contents .menu-top {
         margin: 1rem auto; }
+      @media screen and (min-width: 600px) {
+        html body .contents .menu-top {
+          -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2;
+          margin: -8.5rem auto 0 77rem;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%;
+          text-align: left; } }
       html body .contents #loader {
         height: 2rem;
         padding-bottom: 7px;
         display: none; }
       html body .contents .dropdown-menu select {
         background-color: white; }
+      @media screen and (min-width: 600px) {
+        html body .contents .dropdown-menu {
+          -webkit-box-ordinal-group: 4;
+              -ms-flex-order: 3;
+                  order: 3;
+          margin: -7rem auto 0 77rem;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%;
+          text-align: left; } }
+    @media screen and (min-width: 600px) {
+      html body header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
     html body .container #news {
       display: -webkit-box;
       display: -ms-flexbox;

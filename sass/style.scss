@@ -24,13 +24,37 @@ html{
             height: 400px;
             width:100%;
             align-content: flex-end;
+            transform: scale(1);
+            transition: all 0.5s linear;
+
             
             .ny-logo{
                 @extend %positioning-mobile;
+              
+ 
             }
+            @include tablet{
+                .ny-logo{
+                    order:1;
+                    // margin: 0px 65% 0px 35%;
+                    margin: 0 25% 0 auto;
+
+                }
+            }   
+           
+
+
             .menu-top{
                 @extend %positioning-mobile;
                 margin: 1rem auto;
+            }
+            @include tablet{
+                .menu-top{
+                    order:2;
+                    margin: -8.5rem auto 0 77rem;
+                    flex-basis: 100%;
+                    text-align: left;
+                }
             }
             
             #loader{
@@ -47,9 +71,25 @@ html{
                 }
                 
             }    
+            @include tablet{
+                .dropdown-menu{
+                    order:3;
+                    margin: -7rem auto 0 77rem;
+                    flex-basis:100%;
+                    text-align: left;
+                }
+            }
             
         }
-        
+       
+        @include tablet {
+            header{
+                display:flex;
+                flex-basis:100%;
+            }
+        } 
+
+
         .container{
             
             #news{

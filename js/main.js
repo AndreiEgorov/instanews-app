@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Built by LucyBot. www.lucybot.com
 
     $("#section").on("change", function (data) {
-        $(".contents").css({ "transform": "scale(0.7)", "transition": "all 0.5s linear", "height": "350px", });
+        $(".contents").css({ "transform": "scale(0.7)", "height": "350px", });
 
 
         $("#loader").show();
@@ -38,7 +38,7 @@ $(document).ready(function () {
                     var filteredAbstract = value.abstract;
                     var filterdLink = value.url;
 
-
+                    console.log(filteredAbstract);
 
 
                     $("#news").append("<li> <a href=" + [filterdLink] + "> <div class='newsbox' id='newssquare" + index + "' style='background-image: url(" + filteredImage + ")'></div> </a> </li>");
