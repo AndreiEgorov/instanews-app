@@ -21,6 +21,19 @@ html{
         flex-wrap: wrap;
         justify-content: center;
         
+        #loader-container{
+            display: flex;
+            margin: 1rem auto;
+            justify-content: center;
+            
+            
+            #loader{
+                height: 2rem;
+                padding-bottom: 7px;
+                text-align: center;
+                display:none;
+            }
+        }
         .contents{
             display:flex;
             flex-wrap: wrap;
@@ -30,97 +43,94 @@ html{
             align-content: flex-end;
             transform: scale(1);
             transition: all 0.5s linear;
-
-
+            
+            
             
             .ny-logo{
                 @extend %positioning-mobile;
-              
- 
+                
+                
             }
             @include tablet{
                 .ny-logo{
                     order:1;
                     // margin: 0px 65% 0px 35%;
-                   min-width: 100%;
-                   margin: 0 10rem 0 auto;
-
+                    min-width: 100%;
+                    margin: 0 10rem 0 auto;
+                    
                 }
             }   
-           
-        #dropdown-elements{
-            order: 2;
-
-            @include tablet{
-                margin: -9rem -22rem 0 auto;  
-                flex-basis: 100%;
-            }
             
-
-
-        
-
-            .menu-top{
-                @extend %positioning-mobile;
-                margin: 1rem auto;
-            }
-            @include tablet{
-                .menu-top{
-                    order:2;
-                    // margin: -8.5rem auto 0 77rem;
+            #dropdown-elements{
+                order: 2;
+                
+                @include tablet{
+                    margin: -9rem -22rem 0 auto;  
                     flex-basis: 100%;
-                    text-align: center;
-                    margin: 0px auto 1rem -30rem;
-                }
-            }
-            
-            #loader{
-                height: 2rem;
-                padding-bottom: 7px;
-                display:none;
-            }
-
-            .dropdown-menu{
-                @extend %positioning-mobile;
-
-                select{
-                    background-color: white;
-
-                    
-                       @include tablet{
-                        margin: 0 44px 0 0;
-                       } 
-                    
                 }
                 
-            @include tablet{
-                text-align: initial;
-                text-align: center;
-                margin: 0 auto 1px -28rem;
-            }   
                 
-            }    
-            @include tablet{
+                
+                
+                
+                .menu-top{
+                    @extend %positioning-mobile;
+                    margin: 1rem auto;
+                }
+                @include tablet{
+                    .menu-top{
+                        order:2;
+                        // margin: -8.5rem auto 0 77rem;
+                        flex-basis: 100%;
+                        text-align: center;
+                        margin: 0px auto 1rem -30rem;
+                    }
+                }
+                
+                
+                
                 .dropdown-menu{
-                    order:3;
-                    // margin: -7rem auto 0 77rem;
-                    flex-basis:100%;
-                    // text-align: left;
+                    @extend %positioning-mobile;
+                    
+                    select{
+                        background-color: white;
+                        
+                        
+                        @include tablet{
+                            margin: 0 44px 0 0;
+                        } 
+                        
+                    }
+                    
+                    @include tablet{
+                        text-align: initial;
+                        text-align: center;
+                        margin: 0 auto 1px -28rem;
+                    }   
+                    
+                }    
+                @include tablet{
+                    .dropdown-menu{
+                        order:3;
+                        // margin: -7rem auto 0 77rem;
+                        flex-basis:100%;
+                        // text-align: left;
+                    }
                 }
+                
             }
-
-        }
             
         }
-       
+        
         @include tablet {
             header{
                 display:flex;
                 flex-basis:100%;
+                flex-wrap: wrap;
             }
         } 
-
-
+        
+        
         .container{
             
             #news{
@@ -133,23 +143,23 @@ html{
                     
                     height:100vw;
                     width:100%;
-
+                    
                     a{text-decoration: none;
                         color:#ffffff;
-
+                        
                         .newsbox{
                             display: flex;
                             align-items: flex-end;
                             height:100vw;
                             width:100vw;
                             background-size: cover;
-                           
-
+                            
+                            
                             .abstract{
                                 width: 100%;
                                 background-color: rgba(0, 0, 0, 0.497);                     
-                                }
-                          
+                            }
+                            
                             
                         }
                     }
@@ -164,13 +174,13 @@ html{
             align-content: center;
             color: #c2c2c2;
             width: 100%;
-
-
+            
+            
             #copyright{
                 padding: 15px;
             }
-
-                
+            
+            
             
         }
         
