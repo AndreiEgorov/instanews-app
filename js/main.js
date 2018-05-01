@@ -3,7 +3,28 @@ $(document).ready(function () {
     // Built by LucyBot. www.lucybot.com
 
     $("#section").on("change", function (data) {
-        $(".contents").css({ "transform": "scale(0.7)", "height": "350px", });
+
+        $("header").addClass("header-active");
+
+
+
+        // if (screen.width > 599) {
+        //     $("header").css({ "height": "150px" });
+        //     $(".contents").css({ "height": "150px" })
+        //     $(".ny-logo").css({ "transform": "scale(0.4)" })
+        // }
+        // else if (screen.width > 1000) {
+        //     $(".contents").css({ "transform": "scale(0.5)", "height": "200px", })
+        // }
+
+        // ==============   =======
+        // else {
+
+
+        // $("header").css({ "transform": "scale(0.7)", "height": "350px", })
+
+
+        // }
 
 
         $("#loader").show();

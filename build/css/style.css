@@ -103,49 +103,42 @@ html {
       -webkit-transition: all 0.5s linear;
       transition: all 0.5s linear; }
       @media screen and (min-width: 600px) {
+        html body .contents {
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
+      @media screen and (min-width: 600px) {
         html body .contents .ny-logo {
-          -webkit-box-ordinal-group: 2;
-              -ms-flex-order: 1;
-                  order: 1;
-          min-width: 100%;
-          margin: 0 10rem 0 auto; } }
-      html body .contents #dropdown-elements {
-        -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-                order: 2; }
-        @media screen and (min-width: 600px) {
-          html body .contents #dropdown-elements {
-            margin: -9rem -22rem 0 auto;
-            -ms-flex-preferred-size: 100%;
-                flex-basis: 100%; } }
-        html body .contents #dropdown-elements .menu-top {
-          margin: 1rem auto; }
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%;
+          text-align: initial;
+          min-width: initial;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear; } }
+      @media screen and (min-width: 600px) {
+        html body .contents #dropdown-elements {
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%; } }
+      html body .contents #dropdown-elements .menu-top {
+        margin: 1rem auto; }
         @media screen and (min-width: 600px) {
           html body .contents #dropdown-elements .menu-top {
-            -webkit-box-ordinal-group: 3;
-                -ms-flex-order: 2;
-                    order: 2;
-            -ms-flex-preferred-size: 100%;
-                flex-basis: 100%;
-            text-align: center;
-            margin: 0px auto 1rem -30rem; } }
-        html body .contents #dropdown-elements .dropdown-menu select {
-          background-color: white; }
-          @media screen and (min-width: 600px) {
-            html body .contents #dropdown-elements .dropdown-menu select {
-              margin: 0 44px 0 0; } }
-        @media screen and (min-width: 600px) {
-          html body .contents #dropdown-elements .dropdown-menu {
-            text-align: initial;
-            text-align: center;
-            margin: 0 auto 1px -28rem; } }
-        @media screen and (min-width: 600px) {
-          html body .contents #dropdown-elements .dropdown-menu {
-            -webkit-box-ordinal-group: 4;
-                -ms-flex-order: 3;
-                    order: 3;
-            -ms-flex-preferred-size: 100%;
-                flex-basis: 100%; } }
+            text-align: initial; } }
+      html body .contents #dropdown-elements .dropdown-menu select {
+        background-color: white; }
+      @media screen and (min-width: 600px) {
+        html body .contents #dropdown-elements .dropdown-menu {
+          text-align: initial; } }
     @media screen and (min-width: 600px) {
       html body header {
         display: -webkit-box;
@@ -155,17 +148,50 @@ html {
             flex-basis: 100%;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; } }
+    html body .header-active {
+      height: 330px; }
+      @media screen and (min-width: 600px) {
+        html body .header-active {
+          height: 150px; } }
+      html body .header-active .contents {
+        height: 290px; }
+        @media screen and (min-width: 600px) {
+          html body .header-active .contents {
+            height: 150px; } }
+      html body .header-active .ny-logo {
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7); }
+        @media screen and (min-width: 600px) {
+          html body .header-active .ny-logo {
+            -webkit-transform: scale(0.5);
+                    transform: scale(0.5); } }
     html body .container #news {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      width: 100%;
-      margin-top: 10px; }
+      width: 100%; }
+      @media screen and (min-width: 600px) {
+        html body .container #news #news {
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -ms-flex-preferred-size: 33%;
+              flex-basis: 33%;
+          max-width: 33%; } }
       html body .container #news li {
-        height: 100vw;
-        width: 100%; }
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 100%;
+                flex: 0 1 100%;
+        height: 100vw; }
+        @media screen and (min-width: 600px) {
+          html body .container #news li {
+            -webkit-box-flex: 0;
+                -ms-flex: 0 1 100%;
+                    flex: 0 1 100%;
+            height: 20rem;
+            -ms-flex-preferred-size: 33%;
+                flex-basis: 33%; } }
         html body .container #news li a {
           text-decoration: none;
           color: #ffffff; }
@@ -179,6 +205,11 @@ html {
             height: 100vw;
             width: 100vw;
             background-size: cover; }
+            @media screen and (min-width: 600px) {
+              html body .container #news li a .newsbox {
+                width: initial;
+                height: 20rem;
+                background-position: center; } }
             html body .container #news li a .newsbox .abstract {
               width: 100%;
               background-color: rgba(0, 0, 0, 0.497); }
@@ -196,15 +227,6 @@ html {
       width: 100%; }
       html body footer #copyright {
         padding: 15px; }
-  html li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%; }
-    @media screen and (min-width: 600px) {
-      html li {
-        -webkit-box-flex: 0;
-            -ms-flex: 0 1 100%;
-                flex: 0 1 100%; } }
   html li {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;

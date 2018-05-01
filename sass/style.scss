@@ -44,48 +44,46 @@ html{
             transform: scale(1);
             transition: all 0.5s linear;
             
+            @include tablet{
+                    flex-wrap: nowrap;
+                    align-items: center;    
+            }
             
             
             .ny-logo{
                 @extend %positioning-mobile;
                 
+                @include tablet{
+                        flex-basis: 50%;
+                        text-align: initial;
+                        min-width: initial;
+                        display: flex;
+                        justify-content: flex-end;
+                        transform: scale(1);
+                        transition: all 0.5s linear;
+                }
                 
             }
-            @include tablet{
-                .ny-logo{
-                    order:1;
-                    // margin: 0px 65% 0px 35%;
-                    min-width: 100%;
-                    margin: 0 10rem 0 auto;
-                    
-                }
-            }   
+            
             
             #dropdown-elements{
-                order: 2;
                 
                 @include tablet{
-                    margin: -9rem -22rem 0 auto;  
-                    flex-basis: 100%;
+                    flex-basis: 50%;
                 }
-                
-                
-                
                 
                 
                 .menu-top{
                     @extend %positioning-mobile;
                     margin: 1rem auto;
-                }
-                @include tablet{
-                    .menu-top{
-                        order:2;
-                        // margin: -8.5rem auto 0 77rem;
-                        flex-basis: 100%;
-                        text-align: center;
-                        margin: 0px auto 1rem -30rem;
+                    
+                    @include tablet{
+                        &{
+                            text-align: initial;
+                        }
                     }
                 }
+                
                 
                 
                 
@@ -95,40 +93,54 @@ html{
                     select{
                         background-color: white;
                         
-                        
-                        @include tablet{
-                            margin: 0 44px 0 0;
-                        } 
-                        
                     }
                     
                     @include tablet{
-                        text-align: initial;
-                        text-align: center;
-                        margin: 0 auto 1px -28rem;
-                    }   
+                        &{
+                            text-align: initial;
+                        }
+                    }
                     
                 }    
-                @include tablet{
-                    .dropdown-menu{
-                        order:3;
-                        // margin: -7rem auto 0 77rem;
-                        flex-basis:100%;
-                        // text-align: left;
-                    }
-                }
                 
             }
             
         }
+        
+        
         
         @include tablet {
             header{
                 display:flex;
                 flex-basis:100%;
                 flex-wrap: wrap;
+                
             }
+            
+            
         } 
+        
+        .header-active{
+            height: 330px;
+            @include tablet {
+                height: 150px;
+            }
+            
+            .contents{
+                height:290px;
+                @include tablet{
+                    height:150px;
+                }
+            }
+            .ny-logo{
+                transform:scale(0.7);
+                @include tablet {
+                    transform: scale(0.5);
+                }
+            }
+        }
+        
+        
         
         
         .container{
@@ -137,12 +149,27 @@ html{
                 display: flex;
                 flex-wrap: wrap;
                 width:100%;
-                margin-top: 10px;
+
+                @include tablet{
+                    #news{
+                        flex-wrap: wrap;
+                        flex-basis: 33%;
+                        max-width: 33%;
+                    }
+
+                }
+                
                 
                 li{
-                    
+                    flex: 0 1 100%;
                     height:100vw;
-                    width:100%;
+                    
+
+                    @include tablet {
+                        flex: 0 1 100%;
+                        height:20rem;
+                        flex-basis:33%; 
+                    }
                     
                     a{text-decoration: none;
                         color:#ffffff;
@@ -153,16 +180,24 @@ html{
                             height:100vw;
                             width:100vw;
                             background-size: cover;
+
+                            @include tablet{
+                                     width: initial;
+                                    height: 20rem;
+                                    background-position: center;
+                            }
                             
                             
                             .abstract{
                                 width: 100%;
                                 background-color: rgba(0, 0, 0, 0.497);                     
                             }
-                            
-                            
-                        }
-                    }
+                        }                          
+                    }   
+
+                    
+                       
+                    
                 }
             }
         }
@@ -191,12 +226,6 @@ html{
     
     
     
-    li {
-        flex: 0 1 100%;
-        @include tablet {
-            flex: 0 1 100%;
-        }
-    }
     
     li {
         flex: 0 1 100%;
