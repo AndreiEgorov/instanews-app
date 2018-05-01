@@ -5,32 +5,8 @@ $(document).ready(function () {
     $("#section").on("change", function (data) {
 
         $("header").addClass("header-active");
-
-
-
-        // if (screen.width > 599) {
-        //     $("header").css({ "height": "150px" });
-        //     $(".contents").css({ "height": "150px" })
-        //     $(".ny-logo").css({ "transform": "scale(0.4)" })
-        // }
-        // else if (screen.width > 1000) {
-        //     $(".contents").css({ "transform": "scale(0.5)", "height": "200px", })
-        // }
-
-        // ==============   =======
-        // else {
-
-
-        // $("header").css({ "transform": "scale(0.7)", "height": "350px", })
-
-
-        // }
-
-
         $("#loader").show();
         $("#news li").remove();
-
-
         var selected = $("#section").val();
 
         var url = "https://api.nytimes.com/svc/topstories/v2/" + selected + ".json";
@@ -59,53 +35,17 @@ $(document).ready(function () {
                     var filteredAbstract = value.abstract;
                     var filterdLink = value.url;
 
-
-
-
                     $("#news").append("<li> <a href=" + [filterdLink] + "> <div class='newsbox' id='newssquare" + index + "' style='background-image: url(" + filteredImage + ")'></div> </a> </li>");
                     $("#newssquare" + index).append("<p class='abstract'> " + [filteredAbstract] + " </p>");
 
                     $("#loader").hide();
 
                 });
-
-
-
-
-
-
-
             });
-
-
     })
-    // .fail(function (err) {
-    //     throw err;
-    // });
+    $(function () {
+        $("#section").selectric();
+    });
+
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // loop through the filtere array
-// for (var index = 0; index < filteredResults.length; index++) {
-
-//     // console.log(filteredImage);
-//     // var articleImage = dataResults[index].multimedia[4].url;
-//     // console.log(articleImage);
-//     console.log(filteredResults[index].multimedia[4].url);
-// }
-
-
