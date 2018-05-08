@@ -6,7 +6,11 @@ var gulp = require('gulp'),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
     cssnano = require("gulp-cssnano"),
-    rename = require("gulp-rename");;
+    rename = require("gulp-rename")
+babel = require('gulp-babel');
+
+
+
 
 gulp.task('lint', function () {
     return gulp
@@ -36,6 +40,9 @@ gulp.task("sass", function () {
 gulp.task('scripts', gulp.series('lint', function () {
     return gulp
         .src('./js/*.js')  //will look at every .js file in the js directory and will minify them
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(uglify())
         .pipe(rename({ extname: ".min.js" }))
         .pipe(gulp.dest('./build/js'));

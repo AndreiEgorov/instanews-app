@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    let randomvariable = "Hello";
 
     // Built by LucyBot. www.lucybot.com
 
@@ -21,10 +22,10 @@ $(document).ready(function () {
         })
             .done(function (data) {
 
-                var dataResults = data.results;
+                let dataResults = data.results;
 
                 // new array based on dataResults, filter out items in the array that don't have any images and trim the results to 12
-                var filteredResults = dataResults.filter(function (index) {
+                let filteredResults = dataResults.filter(function (index) {
                     return index.multimedia.length;
                 }).slice(0, 12);
 
