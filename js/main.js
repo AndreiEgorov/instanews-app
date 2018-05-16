@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let randomvariable = "Hello";
+
 
     // Built by LucyBot. www.lucybot.com
 
@@ -48,9 +48,9 @@ $(document).ready(function () {
 
             });
     })
-    $(function () {
-        $("#section").selectric();
-    });
 
+    $(function () {
+        $('#section').selectric();
+    });
 
 })
