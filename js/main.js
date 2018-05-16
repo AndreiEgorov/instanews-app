@@ -42,6 +42,10 @@ $(document).ready(function () {
                     $("#loader").hide();
 
                 });
+            })
+            .fail(function () {
+                alert("Sorry, an unexpected error occured. Please, try again later")
+
             });
     })
     $(function () {
