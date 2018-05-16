@@ -6,8 +6,8 @@ var gulp = require('gulp'),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
     cssnano = require("gulp-cssnano"),
-    rename = require("gulp-rename")
-babel = require('gulp-babel');
+    rename = require("gulp-rename"),
+    babel = require('gulp-babel');
 
 
 
