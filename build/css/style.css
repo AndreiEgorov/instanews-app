@@ -281,14 +281,15 @@ html {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      margin: 0% 0% 5% 5%;
+      margin: 30px 20px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-line-pack: center;
           align-content: center;
       color: #c2c2c2;
-      width: 100%; }
+      width: 100%;
+      margin-top: auto; }
       @media (min-width: 1000px) {
         html body footer {
           -webkit-box-pack: start;

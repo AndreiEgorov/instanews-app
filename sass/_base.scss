@@ -247,11 +247,12 @@ html{
         
         footer{
             justify-content: center;
-            margin: 0% 0% 5% 5%;
+            margin: 30px 20px;
             display:flex;
             align-content: center;
             color: #c2c2c2;
             width: 100%;
+            margin-top: auto;
             @include desktop{
                 justify-content: flex-start;
             }
